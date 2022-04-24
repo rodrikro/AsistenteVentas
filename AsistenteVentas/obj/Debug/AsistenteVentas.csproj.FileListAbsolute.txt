@@ -1,0 +1,17 @@
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\AsistenteVentas.exe.config
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\AsistenteVentas.exe
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\AsistenteVentas.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.csproj.AssemblyReference.cache
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.Control.IniciarSesion.resources
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.Properties.Resources.resources
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.csproj.GenerateResource.cache
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.csproj.CoreCompileInputs.cache
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.exe
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\AccesoDatos.dll
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\Negocio.Servicios.dll
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\AccesoDatos.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\bin\Debug\Negocio.Servicios.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.csproj.CopyComplete
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.EscritorioAsistente.resources
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\AsistenteVentas\obj\Debug\AsistenteVentas.Ventas.PuntoVenta.resources

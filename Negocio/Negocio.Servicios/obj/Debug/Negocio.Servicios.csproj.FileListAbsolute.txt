@@ -1,0 +1,9 @@
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\bin\Debug\Negocio.Servicios.dll
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\bin\Debug\Negocio.Servicios.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\bin\Debug\AccesoDatos.dll
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\bin\Debug\AccesoDatos.pdb
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\obj\Debug\Negocio.Servicios.csproj.AssemblyReference.cache
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\obj\Debug\Negocio.Servicios.csproj.CoreCompileInputs.cache
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\obj\Debug\Negocio.Servicios.csproj.CopyComplete
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\obj\Debug\Negocio.Servicios.dll
+C:\Users\RodrigoMK\source\repos\zz\AsistenteVentas\Negocio\Negocio.Servicios\obj\Debug\Negocio.Servicios.pdb
