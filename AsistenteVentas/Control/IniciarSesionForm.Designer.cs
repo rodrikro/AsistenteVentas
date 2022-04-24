@@ -1,7 +1,7 @@
 ﻿
 namespace AsistenteVentas.Control
 {
-    partial class IniciarSesion
+    partial class IniciarSesionForm
     {
         /// <summary>
         /// Required designer variable.

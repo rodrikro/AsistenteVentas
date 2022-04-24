@@ -17,7 +17,7 @@ namespace AsistenteVentas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IniciarSesion());
+            Application.Run(new IniciarSesionForm());
         }
     }
 }

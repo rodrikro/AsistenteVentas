@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AsistenteVentas.Control
 {
-    public partial class IniciarSesion : Form
+    public partial class IniciarSesionForm : Form
     {
         MainNegocioServicios _usuarioServicio;
 
-        public IniciarSesion()
+        public IniciarSesionForm()
         {
             _usuarioServicio = new MainNegocioServicios();
             InitializeComponent();
@@ -59,7 +59,7 @@ namespace AsistenteVentas.Control
                 if (estaAutenticado)
                 {
                     //Abrir pantalla principal
-                    EscritorioAsistente escritorioAsistente = new EscritorioAsistente();
+                    EscritorioAsistenteForm escritorioAsistente = new EscritorioAsistenteForm();
                     escritorioAsistente.Show();
                     this.Hide();
                 }
