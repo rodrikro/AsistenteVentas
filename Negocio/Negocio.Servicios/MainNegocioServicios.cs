@@ -1,4 +1,5 @@
-﻿using Negocio.Servicios.Control;
+﻿using AccesoDatos.Constantes;
+using Negocio.Servicios.Control;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,13 @@ namespace Negocio.Servicios
 {
     public class MainNegocioServicios
     {
+        ConstantesBD _constantesBD;
         public UsuarioServicios ServicioUsuarios { get; set; }
 
-        public MainNegocioServicios() 
+        public MainNegocioServicios(ConstantesBD constantesBD) 
         {
-            ServicioUsuarios = new UsuarioServicios();
+            _constantesBD = constantesBD;
+            ServicioUsuarios = new UsuarioServicios(_constantesBD);
         }
     }
 }

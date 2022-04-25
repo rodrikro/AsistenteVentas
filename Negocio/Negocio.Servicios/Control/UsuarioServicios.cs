@@ -1,4 +1,5 @@
 ﻿using AccesoDatos;
+using AccesoDatos.Constantes;
 using AccesoDatos.Modelos;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,12 @@ namespace Negocio.Servicios.Control
 {
     public class UsuarioServicios
     {
+        ConstantesBD _constantesBD;
         MainAccesoDatos _accesoDatos;
-        public UsuarioServicios() 
+        public UsuarioServicios(ConstantesBD constantesBD) 
         {
-            _accesoDatos = new MainAccesoDatos();
+            _constantesBD = constantesBD;
+            _accesoDatos = new MainAccesoDatos(_constantesBD);
         }
 
         public bool IniciarSesion(Usuario us)

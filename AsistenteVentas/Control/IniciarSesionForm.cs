@@ -1,4 +1,5 @@
-﻿using AccesoDatos.Modelos;
+﻿using AccesoDatos.Constantes;
+using AccesoDatos.Modelos;
 using Negocio.Servicios;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,13 @@ namespace AsistenteVentas.Control
 {
     public partial class IniciarSesionForm : Form
     {
+        ConstantesBD _constantesBD = new ConstantesBD();
         MainNegocioServicios _usuarioServicio;
 
-        public IniciarSesionForm()
+        public IniciarSesionForm(ConstantesBD constantesBD)
         {
-            _usuarioServicio = new MainNegocioServicios();
+            _constantesBD = new ConstantesBD();
+            _usuarioServicio = new MainNegocioServicios(constantesBD);
             InitializeComponent();
         }
 
@@ -59,7 +62,7 @@ namespace AsistenteVentas.Control
                 if (estaAutenticado)
                 {
                     //Abrir pantalla principal
-                    EscritorioAsistenteForm escritorioAsistente = new EscritorioAsistenteForm();
+                    EscritorioAsistenteForm escritorioAsistente = new EscritorioAsistenteForm(_constantesBD);
                     escritorioAsistente.Show();
                     this.Hide();
                 }

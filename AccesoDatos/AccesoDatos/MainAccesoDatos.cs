@@ -1,4 +1,5 @@
 ﻿using AccesoDatos.Catalogos;
+using AccesoDatos.Constantes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,13 @@ namespace AccesoDatos
 {
     public class MainAccesoDatos
     {
-
+        ConstantesBD _constantesBD;
         public OperacionesUsuario opUsuarios { get; set; }
 
-        public MainAccesoDatos() 
+        public MainAccesoDatos(ConstantesBD constantesBD) 
         {
-            opUsuarios = new OperacionesUsuario();
+            _constantesBD = constantesBD;
+            opUsuarios = new OperacionesUsuario(_constantesBD);
         }
     }
 }

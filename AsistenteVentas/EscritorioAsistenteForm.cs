@@ -1,4 +1,5 @@
-﻿using AsistenteVentas.Inventario;
+﻿using AccesoDatos.Constantes;
+using AsistenteVentas.Inventario;
 using AsistenteVentas.Ventas;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace AsistenteVentas
 {
     public partial class EscritorioAsistenteForm : Form
     {
+        ConstantesBD _constantesBD;
         bool banderaFormAbierto = true;
-        public EscritorioAsistenteForm()
+        public EscritorioAsistenteForm(ConstantesBD constantesBD)
         {
+            _constantesBD = constantesBD;
             InitializeComponent();
         }
 

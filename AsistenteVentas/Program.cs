@@ -15,9 +15,11 @@ namespace AsistenteVentas
         [STAThread]
         static void Main()
         {
+            ConfiguracionGlobal configuracionGlobal = new ConfiguracionGlobal();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IniciarSesionForm());
+            Application.Run(new IniciarSesionForm(configuracionGlobal.constantesBD));
         }
     }
 }

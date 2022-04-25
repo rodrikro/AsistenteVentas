@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfiguracionGlobal.cs" />
     <Compile Include="Control\IniciarSesionForm.cs">
       <SubType>Form</SubType>
     </Compile>
