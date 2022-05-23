@@ -1,6 +1,7 @@
 ﻿using AccesoDatos.Constantes;
 using AsistenteVentas.Inventario;
 using AsistenteVentas.Ventas;
+using Negocio.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,14 @@ namespace AsistenteVentas
 {
     public partial class EscritorioAsistenteForm : Form
     {
-        ConstantesBD _constantesBD;
+        ConstantesBD _constantesBD = new ConstantesBD();
+        MainNegocioServicios _servicios;
+
         bool banderaFormAbierto = true;
         public EscritorioAsistenteForm(ConstantesBD constantesBD)
         {
             _constantesBD = constantesBD;
+            _servicios = new MainNegocioServicios(constantesBD);
             InitializeComponent();
         }
 
@@ -66,7 +70,7 @@ namespace AsistenteVentas
 
         private void AbrirCatalogoArticulos()
         {
-            CatalogoArticulosForm catalogoArticulos = new CatalogoArticulosForm();
+            CatalogoArticulosForm catalogoArticulos = new CatalogoArticulosForm(_constantesBD);
             catalogoArticulos.MdiParent = EscritorioAsistenteForm.ActiveForm;
             catalogoArticulos.Show();
         }

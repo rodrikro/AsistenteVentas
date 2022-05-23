@@ -12,11 +12,17 @@ namespace Negocio.Servicios
     {
         ConstantesBD _constantesBD;
         public UsuarioServicios ServicioUsuarios { get; set; }
+        public DepartamentoServicios ServicioDepartamentos { get; set; }
+        public CategoriaServicios ServiciosCategorias { get; set; }
 
         public MainNegocioServicios(ConstantesBD constantesBD) 
         {
             _constantesBD = constantesBD;
+            
             ServicioUsuarios = new UsuarioServicios(_constantesBD);
+            ServicioDepartamentos = new DepartamentoServicios(_constantesBD);
+            ServiciosCategorias = new CategoriaServicios(_constantesBD);
+
         }
     }
 }

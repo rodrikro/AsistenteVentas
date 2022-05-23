@@ -20,7 +20,7 @@ namespace AsistenteVentas.Control
 
         public IniciarSesionForm(ConstantesBD constantesBD)
         {
-            _constantesBD = new ConstantesBD();
+            _constantesBD = constantesBD;
             _usuarioServicio = new MainNegocioServicios(constantesBD);
             InitializeComponent();
         }

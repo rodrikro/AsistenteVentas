@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\CategoriaServicios.cs" />
+    <Compile Include="Control\DepartamentoServicios.cs" />
     <Compile Include="Control\UsuarioServicios.cs" />
     <Compile Include="MainNegocioServicios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

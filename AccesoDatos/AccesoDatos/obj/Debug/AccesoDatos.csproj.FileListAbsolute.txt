@@ -21,3 +21,4 @@ C:\Users\Rodrigo-MK\Documents\Repos\PyME\AsistenteVentas\AccesoDatos\AccesoDatos
 C:\Users\Rodrigo-MK\Documents\Repos\PyME\AsistenteVentas\AccesoDatos\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
 C:\Users\Rodrigo-MK\Documents\Repos\PyME\AsistenteVentas\AccesoDatos\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\Rodrigo-MK\Documents\Repos\PyME\AsistenteVentas\AccesoDatos\AccesoDatos\obj\Debug\AccesoDatos.pdb
+C:\Users\Rodrigo-MK\Documents\Repos\PyME\AsistenteVentas\AccesoDatos\AccesoDatos\obj\Debug\AccesoDatos.csproj.AssemblyReference.cache

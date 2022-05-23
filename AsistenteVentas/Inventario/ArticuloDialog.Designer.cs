@@ -30,6 +30,11 @@ namespace AsistenteVentas.Inventario
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_cantidadMas = new System.Windows.Forms.Button();
+            this.btn_cantidadMenos = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbx_categoria = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,11 +47,6 @@ namespace AsistenteVentas.Inventario
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_codigo = new System.Windows.Forms.TextBox();
-            this.btn_cantidadMenos = new System.Windows.Forms.Button();
-            this.btn_cantidadMas = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -77,6 +77,54 @@ namespace AsistenteVentas.Inventario
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Propiedades del artículo";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(426, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 17);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "$";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(420, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Precio";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(447, 168);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(103, 23);
+            this.textBox1.TabIndex = 26;
+            // 
+            // btn_cantidadMas
+            // 
+            this.btn_cantidadMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cantidadMas.Location = new System.Drawing.Point(368, 168);
+            this.btn_cantidadMas.Name = "btn_cantidadMas";
+            this.btn_cantidadMas.Size = new System.Drawing.Size(29, 23);
+            this.btn_cantidadMas.TabIndex = 25;
+            this.btn_cantidadMas.Text = "+";
+            this.btn_cantidadMas.UseVisualStyleBackColor = true;
+            // 
+            // btn_cantidadMenos
+            // 
+            this.btn_cantidadMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cantidadMenos.Location = new System.Drawing.Point(281, 168);
+            this.btn_cantidadMenos.Name = "btn_cantidadMenos";
+            this.btn_cantidadMenos.Size = new System.Drawing.Size(29, 23);
+            this.btn_cantidadMenos.TabIndex = 24;
+            this.btn_cantidadMenos.Text = "-";
+            this.btn_cantidadMenos.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -189,54 +237,6 @@ namespace AsistenteVentas.Inventario
             this.txt_codigo.Size = new System.Drawing.Size(338, 23);
             this.txt_codigo.TabIndex = 12;
             // 
-            // btn_cantidadMenos
-            // 
-            this.btn_cantidadMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cantidadMenos.Location = new System.Drawing.Point(281, 168);
-            this.btn_cantidadMenos.Name = "btn_cantidadMenos";
-            this.btn_cantidadMenos.Size = new System.Drawing.Size(29, 23);
-            this.btn_cantidadMenos.TabIndex = 24;
-            this.btn_cantidadMenos.Text = "-";
-            this.btn_cantidadMenos.UseVisualStyleBackColor = true;
-            // 
-            // btn_cantidadMas
-            // 
-            this.btn_cantidadMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cantidadMas.Location = new System.Drawing.Point(368, 168);
-            this.btn_cantidadMas.Name = "btn_cantidadMas";
-            this.btn_cantidadMas.Size = new System.Drawing.Size(29, 23);
-            this.btn_cantidadMas.TabIndex = 25;
-            this.btn_cantidadMas.Text = "+";
-            this.btn_cantidadMas.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(447, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 23);
-            this.textBox1.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(420, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Precio";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(426, 171);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 17);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "$";
-            // 
             // btn_guardar
             // 
             this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,6 +267,7 @@ namespace AsistenteVentas.Inventario
             this.Controls.Add(this.groupBox1);
             this.Name = "ArticuloDialog";
             this.Text = "Artículo";
+            this.Load += new System.EventHandler(this.ArticuloDialog_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

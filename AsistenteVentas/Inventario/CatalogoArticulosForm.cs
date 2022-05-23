@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AccesoDatos.Constantes;
+using Negocio.Servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,13 @@ namespace AsistenteVentas.Inventario
 {
     public partial class CatalogoArticulosForm : Form
     {
-        public CatalogoArticulosForm()
+        ConstantesBD _constantesBD = new ConstantesBD();
+        MainNegocioServicios _servicios;
+
+        public CatalogoArticulosForm(ConstantesBD constantesBD)
         {
+            _constantesBD = constantesBD;
+            _servicios = new MainNegocioServicios(constantesBD);
             InitializeComponent();
         }
 
@@ -24,7 +31,7 @@ namespace AsistenteVentas.Inventario
 
         private void AbrirArticuloDialog()
         {
-            ArticuloDialog articuloDialog = new ArticuloDialog();
+            ArticuloDialog articuloDialog = new ArticuloDialog(_constantesBD);
             articuloDialog.ShowDialog(this);
         }
     }
