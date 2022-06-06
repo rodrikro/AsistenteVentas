@@ -44,12 +44,14 @@
   <ItemGroup>
     <Compile Include="Catalogos\OperacionesCategorias.cs" />
     <Compile Include="Catalogos\OperacionesDepartamentos.cs" />
+    <Compile Include="Catalogos\OperacionesProveedores.cs" />
     <Compile Include="Catalogos\OperacionesUsuario.cs" />
     <Compile Include="MainAccesoDatos.cs" />
     <Compile Include="Constantes\ConstantesBD.cs" />
     <Compile Include="Modelos\Categoria.cs" />
     <Compile Include="Modelos\Departamento.cs" />
     <Compile Include="Modelos\Producto.cs" />
+    <Compile Include="Modelos\Proveedor.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\ConexionBaseDatos.cs" />

@@ -163,6 +163,7 @@ namespace AsistenteVentas.Inventario
             this.cmbx_departamento.Name = "cmbx_departamento";
             this.cmbx_departamento.Size = new System.Drawing.Size(263, 24);
             this.cmbx_departamento.TabIndex = 20;
+            this.cmbx_departamento.SelectedIndexChanged += new System.EventHandler(this.cmbx_departamento_SelectedIndexChanged);
             // 
             // label4
             // 

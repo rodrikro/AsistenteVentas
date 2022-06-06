@@ -10,22 +10,22 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Catalogos
 {
-    public class OperacionesCategorias
+    public class OperacionesProveedores
     {
         ConstantesBD _constantesBD;
         ConexionBaseDatos _conn;
-        string _tabla = "Categorias";
+        string _tabla = "Proveedores";
 
-        public OperacionesCategorias(ConstantesBD constantesBD)
+        public OperacionesProveedores(ConstantesBD constantesBD)
         {
             _constantesBD = constantesBD;
             _conn = new ConexionBaseDatos(_constantesBD);
         }
 
-        public List<Categoria> RecuperaCategorias(Categoria categoria)
+        public List<Proveedor> RecuperaProveedores(Proveedor proveedor)
         {
-            List<Categoria> listaResp = new List<Categoria>();
-            Categoria o = new Categoria();
+            List<Proveedor> listaResp = new List<Proveedor>();
+            Proveedor o = new Proveedor();
             try
             {
                 //Acceso a base de datos
@@ -35,9 +35,8 @@ namespace AccesoDatos.Catalogos
                 string query = "";
                 query += " SELECT * ";
                 query += " FROM " + _tabla;
-                query += " WHERE idDepartamento = {0}";
+                //query += " WHERE departamento = '{0}'";
 
-                query = string.Format(query, categoria.idDepartamento);
 
                 //Consulta a la base de datos
                 MySqlCommand comando = new MySqlCommand(query, _conn.conexionBaseDatos);
@@ -49,15 +48,12 @@ namespace AccesoDatos.Catalogos
                 while (reader.Read())
                 {
                     //Manipulación del DataSet para tratarlo como lista
-                    o = new Categoria();
+                    o = new Proveedor();
 
-                    o.idCategoria = DBNull.Value == reader["idCategoria"] ? 0 : int.Parse(reader["idCategoria"].ToString());
-                    o.idDepartamento= DBNull.Value == reader["idDepartamento"] ? 0 : int.Parse(reader["idDepartamento"].ToString());
-                    o.clave = DBNull.Value == reader["clave"] ? string.Empty : reader["clave"].ToString();
-                    o.nombreCategoria = DBNull.Value == reader["nombreCategoria"] ? string.Empty : reader["nombreCategoria"].ToString();
-                    o.descripcion = DBNull.Value == reader["descripcion"] ? string.Empty : reader["descripcion"].ToString();
-                    o.momentoCreacion = DBNull.Value == reader["momentoCreacion"] ? DateTime.MinValue : DateTime.Parse(reader["momentoCreacion"].ToString());
-                    o.momentoModificacion = DBNull.Value == reader["momentoModificacion"] ? DateTime.MinValue : DateTime.Parse(reader["momentoModificacion"].ToString());
+                    o.IdProveedor = DBNull.Value == reader["IdProveedor"] ? 0 : int.Parse(reader["IdProveedor"].ToString());
+                    o.NombreProveedor = DBNull.Value == reader["NombreProveedor"] ? string.Empty : reader["NombreProveedor"].ToString();
+                    o.FechaCreacion = DBNull.Value == reader["FechaCreacion"] ? DateTime.MinValue : DateTime.Parse(reader["FechaCreacion"].ToString());
+                    o.FechaModificacion = DBNull.Value == reader["FechaModificacion"] ? DateTime.MinValue : DateTime.Parse(reader["FechaModificacion"].ToString());
 
                     listaResp.Add(o);
                 }
@@ -75,5 +71,6 @@ namespace AccesoDatos.Catalogos
 
             return listaResp;
         }
+
     }
 }

@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 
 namespace Negocio.Servicios.Control
 {
-    public class CategoriaServicios
+    public class ProveedorServicio
     {
         ConstantesBD _constantesBD;
         MainAccesoDatos _accesoDatos;
-        public CategoriaServicios(ConstantesBD constantesBD)
+        public ProveedorServicio(ConstantesBD constantesBD)
         {
             _constantesBD = constantesBD;
             _accesoDatos = new MainAccesoDatos(_constantesBD);
         }
 
-        public List<Categoria> RecuperaCategorias(Categoria c)
+        public List<Proveedor> RecuperaProveedores(Proveedor p)
         {
-            List<Categoria> lista = new List<Categoria>();
+            List<Proveedor> lista = new List<Proveedor>();
             try
             {
-                lista = _accesoDatos.opCategorias.RecuperaCategorias(c);
+                lista = _accesoDatos.opProveedores.RecuperaProveedores(p);
 
             }
             catch (Exception ex)
@@ -34,7 +34,7 @@ namespace Negocio.Servicios.Control
             }
             finally
             {
-
+                
             }
 
             return lista;

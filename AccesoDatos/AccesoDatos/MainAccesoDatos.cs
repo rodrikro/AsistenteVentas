@@ -14,6 +14,7 @@ namespace AccesoDatos
         public OperacionesUsuario opUsuarios { get; set; }
         public OperacionesDepartamentos opDepartamentos { get; set; }
         public OperacionesCategorias opCategorias { get; set; }
+        public OperacionesProveedores opProveedores { get; set; }
 
         public MainAccesoDatos(ConstantesBD constantesBD) 
         {
@@ -21,6 +22,7 @@ namespace AccesoDatos
             opUsuarios = new OperacionesUsuario(_constantesBD);
             opDepartamentos = new OperacionesDepartamentos(_constantesBD);
             opCategorias = new OperacionesCategorias(_constantesBD);
+            opProveedores = new OperacionesProveedores(_constantesBD);
         }
     }
 }
