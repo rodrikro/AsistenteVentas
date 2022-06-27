@@ -15,6 +15,7 @@ namespace Negocio.Servicios
         public DepartamentoServicios ServicioDepartamentos { get; set; }
         public CategoriaServicios ServiciosCategorias { get; set; }
         public ProveedorServicio ServicioProveedores { get; set; }
+        public ProductoServicio ServicioProductos { get; set; }
 
 
         public MainNegocioServicios(ConstantesBD constantesBD) 
@@ -25,6 +26,7 @@ namespace Negocio.Servicios
             ServicioDepartamentos = new DepartamentoServicios(_constantesBD);
             ServiciosCategorias = new CategoriaServicios(_constantesBD);
             ServicioProveedores = new ProveedorServicio(_constantesBD);
+            ServicioProductos = new ProductoServicio(_constantesBD);
 
         }
     }

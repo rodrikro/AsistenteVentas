@@ -18,6 +18,8 @@ namespace AccesoDatos.Modelos
         public string Presentacion { get; set; }
         public int CantidadMinima { get; set; }
         public int CantidadActual { get; set; }
+        public decimal PrecioPublico { get; set; }
+        public decimal CostoProveedor { get; set; }
         public string Descripcion { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaCreacion { get; set; }

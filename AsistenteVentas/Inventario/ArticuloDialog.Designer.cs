@@ -30,9 +30,13 @@ namespace AsistenteVentas.Inventario
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_cantMinMas = new System.Windows.Forms.Button();
+            this.btn_cantMinMenos = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_cantidadMinima = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_precio = new System.Windows.Forms.TextBox();
             this.btn_cantidadMas = new System.Windows.Forms.Button();
             this.btn_cantidadMenos = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,14 +53,24 @@ namespace AsistenteVentas.Inventario
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_costoProveedor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txt_costoProveedor);
+            this.groupBox1.Controls.Add(this.btn_cantMinMas);
+            this.groupBox1.Controls.Add(this.btn_cantMinMenos);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txt_cantidadMinima);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_precio);
             this.groupBox1.Controls.Add(this.btn_cantidadMas);
             this.groupBox1.Controls.Add(this.btn_cantidadMenos);
             this.groupBox1.Controls.Add(this.label6);
@@ -73,16 +87,56 @@ namespace AsistenteVentas.Inventario
             this.groupBox1.Controls.Add(this.txt_codigo);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(590, 215);
+            this.groupBox1.Size = new System.Drawing.Size(572, 268);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Propiedades del artículo";
+            // 
+            // btn_cantMinMas
+            // 
+            this.btn_cantMinMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cantMinMas.Location = new System.Drawing.Point(269, 231);
+            this.btn_cantMinMas.Name = "btn_cantMinMas";
+            this.btn_cantMinMas.Size = new System.Drawing.Size(29, 23);
+            this.btn_cantMinMas.TabIndex = 32;
+            this.btn_cantMinMas.Text = "+";
+            this.btn_cantMinMas.UseVisualStyleBackColor = true;
+            this.btn_cantMinMas.Click += new System.EventHandler(this.btn_cantMinMas_Click);
+            // 
+            // btn_cantMinMenos
+            // 
+            this.btn_cantMinMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cantMinMenos.Location = new System.Drawing.Point(168, 231);
+            this.btn_cantMinMenos.Name = "btn_cantMinMenos";
+            this.btn_cantMinMenos.Size = new System.Drawing.Size(29, 23);
+            this.btn_cantMinMenos.TabIndex = 31;
+            this.btn_cantMinMenos.Text = "-";
+            this.btn_cantMinMenos.UseVisualStyleBackColor = true;
+            this.btn_cantMinMenos.Click += new System.EventHandler(this.btn_cantMinMenos_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(165, 211);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 17);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Cantidad mínima";
+            // 
+            // txt_cantidadMinima
+            // 
+            this.txt_cantidadMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidadMinima.Location = new System.Drawing.Point(203, 231);
+            this.txt_cantidadMinima.Name = "txt_cantidadMinima";
+            this.txt_cantidadMinima.Size = new System.Drawing.Size(60, 23);
+            this.txt_cantidadMinima.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(426, 171);
+            this.label8.Location = new System.Drawing.Point(348, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 17);
             this.label8.TabIndex = 28;
@@ -92,39 +146,42 @@ namespace AsistenteVentas.Inventario
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(420, 148);
+            this.label7.Location = new System.Drawing.Point(365, 148);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.Size = new System.Drawing.Size(111, 17);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Precio";
+            this.label7.Text = "Precio público";
             // 
-            // textBox1
+            // txt_precio
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(447, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 23);
-            this.textBox1.TabIndex = 26;
+            this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precio.Location = new System.Drawing.Point(368, 168);
+            this.txt_precio.Name = "txt_precio";
+            this.txt_precio.Size = new System.Drawing.Size(182, 23);
+            this.txt_precio.TabIndex = 26;
+            this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // btn_cantidadMas
             // 
             this.btn_cantidadMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cantidadMas.Location = new System.Drawing.Point(368, 168);
+            this.btn_cantidadMas.Location = new System.Drawing.Point(113, 231);
             this.btn_cantidadMas.Name = "btn_cantidadMas";
             this.btn_cantidadMas.Size = new System.Drawing.Size(29, 23);
             this.btn_cantidadMas.TabIndex = 25;
             this.btn_cantidadMas.Text = "+";
             this.btn_cantidadMas.UseVisualStyleBackColor = true;
+            this.btn_cantidadMas.Click += new System.EventHandler(this.btn_cantidadMas_Click);
             // 
             // btn_cantidadMenos
             // 
             this.btn_cantidadMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cantidadMenos.Location = new System.Drawing.Point(281, 168);
+            this.btn_cantidadMenos.Location = new System.Drawing.Point(12, 231);
             this.btn_cantidadMenos.Name = "btn_cantidadMenos";
             this.btn_cantidadMenos.Size = new System.Drawing.Size(29, 23);
             this.btn_cantidadMenos.TabIndex = 24;
             this.btn_cantidadMenos.Text = "-";
             this.btn_cantidadMenos.UseVisualStyleBackColor = true;
+            this.btn_cantidadMenos.Click += new System.EventHandler(this.btn_cantidadMenos_Click);
             // 
             // label6
             // 
@@ -188,7 +245,7 @@ namespace AsistenteVentas.Inventario
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(278, 148);
+            this.label3.Location = new System.Drawing.Point(9, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 17;
@@ -197,10 +254,11 @@ namespace AsistenteVentas.Inventario
             // txt_cantPiezas
             // 
             this.txt_cantPiezas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantPiezas.Location = new System.Drawing.Point(316, 168);
+            this.txt_cantPiezas.Location = new System.Drawing.Point(47, 231);
             this.txt_cantPiezas.Name = "txt_cantPiezas";
-            this.txt_cantPiezas.Size = new System.Drawing.Size(46, 23);
+            this.txt_cantPiezas.Size = new System.Drawing.Size(60, 23);
             this.txt_cantPiezas.TabIndex = 16;
+            this.txt_cantPiezas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantPiezas_KeyPress);
             // 
             // label2
             // 
@@ -217,7 +275,7 @@ namespace AsistenteVentas.Inventario
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.Location = new System.Drawing.Point(12, 168);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(263, 23);
+            this.txt_nombre.Size = new System.Drawing.Size(330, 23);
             this.txt_nombre.TabIndex = 14;
             // 
             // label1
@@ -235,34 +293,63 @@ namespace AsistenteVentas.Inventario
             this.txt_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_codigo.Location = new System.Drawing.Point(12, 51);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(338, 23);
+            this.txt_codigo.Size = new System.Drawing.Size(330, 23);
             this.txt_codigo.TabIndex = 12;
             // 
             // btn_guardar
             // 
             this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.Location = new System.Drawing.Point(459, 233);
+            this.btn_guardar.Location = new System.Drawing.Point(443, 286);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(141, 26);
             this.btn_guardar.TabIndex = 1;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // btn_modificar
             // 
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(312, 233);
+            this.btn_modificar.Location = new System.Drawing.Point(290, 286);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(141, 26);
             this.btn_modificar.TabIndex = 2;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(348, 233);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 17);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "$";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(365, 211);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 17);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Costo Proveedor";
+            // 
+            // txt_costoProveedor
+            // 
+            this.txt_costoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_costoProveedor.Location = new System.Drawing.Point(368, 231);
+            this.txt_costoProveedor.Name = "txt_costoProveedor";
+            this.txt_costoProveedor.Size = new System.Drawing.Size(182, 23);
+            this.txt_costoProveedor.TabIndex = 33;
+            // 
             // ArticuloDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 267);
+            this.ClientSize = new System.Drawing.Size(598, 324);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.groupBox1);
@@ -280,7 +367,7 @@ namespace AsistenteVentas.Inventario
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.Button btn_cantidadMas;
         private System.Windows.Forms.Button btn_cantidadMenos;
         private System.Windows.Forms.Label label6;
@@ -297,5 +384,12 @@ namespace AsistenteVentas.Inventario
         private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_cantMinMas;
+        private System.Windows.Forms.Button btn_cantMinMenos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_cantidadMinima;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_costoProveedor;
     }
 }

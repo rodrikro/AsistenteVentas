@@ -17,7 +17,8 @@ namespace AsistenteVentas.Inventario
     {
         ConstantesBD _constantesBD = new ConstantesBD();
         MainNegocioServicios _servicios;
-
+        int cantPiezas = 0;
+        int cantMin = 0; 
         public ArticuloDialog(ConstantesBD constantesBD)
         {
             _constantesBD = constantesBD;
@@ -75,6 +76,157 @@ namespace AsistenteVentas.Inventario
             cmbx_categoria.ValueMember = "idCategoria";
             cmbx_categoria.DisplayMember = "nombreCategoria";
 
+        }
+
+        private void txt_cantPiezas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (    !char.IsControl(e.KeyChar) 
+                    && !char.IsDigit(e.KeyChar) 
+                    && (e.KeyChar != '.')   )
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_cantidadMas_Click(object sender, EventArgs e)
+        {
+            string strCantPiezas = string.IsNullOrEmpty(txt_cantPiezas.Text) ? "0" : txt_cantPiezas.Text;
+            cantPiezas = int.Parse(strCantPiezas);
+            cantPiezas++;
+            txt_cantPiezas.Text = cantPiezas.ToString();
+        }
+
+        private void btn_cantidadMenos_Click(object sender, EventArgs e)
+        {
+            string strCantPiezas = string.IsNullOrEmpty(txt_cantPiezas.Text) ? "0" : txt_cantPiezas.Text;
+            cantPiezas = int.Parse(strCantPiezas);
+
+            if (cantPiezas!=0)
+            {
+                cantPiezas--;
+            }
+
+            txt_cantPiezas.Text = cantPiezas.ToString();
+        }
+
+        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+                    && !char.IsDigit(e.KeyChar)
+                    && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.GuardaArticulo();
+        }
+
+        private void GuardaArticulo()
+        {
+            try
+            {
+                Producto producto = ValidaDatos();
+                if (producto != null)
+                {
+                    _servicios.ServicioProductos.Inserta(producto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private Producto ValidaDatos()
+        {
+            Producto producto = new Producto();
+            try
+            {
+                //------
+                string strPrecio = String.IsNullOrEmpty(txt_precio.Text) ? "0" : txt_precio.Text;
+                string strCostoProveedor = String.IsNullOrEmpty(txt_costoProveedor.Text) ? "0" : txt_costoProveedor.Text;
+                string strCantidadPiezas = String.IsNullOrEmpty(txt_cantPiezas.Text) ? "0" : txt_cantPiezas.Text;
+                string strCantidadMinima = String.IsNullOrEmpty(txt_cantidadMinima.Text) ? "0" : txt_cantidadMinima.Text;
+                //------
+                string codigo = txt_codigo.Text;
+                string nombre = txt_nombre.Text;
+                int cantidad = int.Parse(strCantidadPiezas);
+                int cantidadMinima = int.Parse(strCantidadMinima);
+
+                decimal precio = decimal.Parse(strPrecio);
+                decimal costoProveedor = decimal.Parse(strCostoProveedor);
+
+                var departamento = (Departamento)cmbx_departamento.SelectedItem;
+                int idDepartamento = departamento.idDepartamento;
+                var categoria = (Categoria)cmbx_categoria.SelectedItem;
+                int idCategoria = categoria.idCategoria;
+                var proveedor = (Proveedor)cmbx_proveedor.SelectedItem;
+                int idProveedor = proveedor.IdProveedor;
+
+
+                producto.IdDepartamento = idDepartamento;
+                producto.IdCategoria = idCategoria;
+                producto.IdProveedor = idProveedor;
+                
+                producto.Clave = codigo;
+                producto.Nombre = nombre;
+                producto.Presentacion = "";
+                producto.CantidadMinima = cantidadMinima;
+                producto.CantidadActual = cantidad;
+
+                producto.PrecioPublico = precio;
+                producto.CostoProveedor = costoProveedor;
+                
+                producto.Descripcion = ""; //pendiente
+                
+                producto.Activo = true;
+
+                producto.FechaCreacion = DateTime.Now; //pendiente
+                producto.FechaModificacion = DateTime.Now; //pendiente
+
+                return producto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Verifique los datos.\n" + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+        }
+
+        private void btn_cantMinMenos_Click(object sender, EventArgs e)
+        {
+            string strCantMin = string.IsNullOrEmpty(txt_cantidadMinima.Text) ? "0" : txt_cantidadMinima.Text;
+            cantMin = int.Parse(strCantMin);
+
+            if (cantMin != 0)
+            {
+                cantMin--;
+            }
+
+            txt_cantidadMinima.Text = txt_cantidadMinima.ToString();
+        }
+
+        private void btn_cantMinMas_Click(object sender, EventArgs e)
+        {
+            string strCantMin = string.IsNullOrEmpty(txt_cantidadMinima.Text) ? "0" : txt_cantidadMinima.Text;
+            cantMin = int.Parse(strCantMin);
+            cantMin++;
+            txt_cantidadMinima.Text = cantMin.ToString();
         }
     }
 }

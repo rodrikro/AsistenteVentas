@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Catalogos\OperacionesCategorias.cs" />
     <Compile Include="Catalogos\OperacionesDepartamentos.cs" />
+    <Compile Include="Catalogos\OperacionesProductos.cs" />
     <Compile Include="Catalogos\OperacionesProveedores.cs" />
     <Compile Include="Catalogos\OperacionesUsuario.cs" />
     <Compile Include="MainAccesoDatos.cs" />

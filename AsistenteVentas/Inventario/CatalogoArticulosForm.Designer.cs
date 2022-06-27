@@ -33,13 +33,13 @@ namespace AsistenteVentas.Inventario
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_nombreArticulo = new System.Windows.Forms.TextBox();
-            this.cmbx_departamento = new System.Windows.Forms.ComboBox();
-            this.cmbx_categoria = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_buscar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbx_categoria = new System.Windows.Forms.ComboBox();
+            this.cmbx_departamento = new System.Windows.Forms.ComboBox();
+            this.txt_nombreArticulo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -89,51 +89,15 @@ namespace AsistenteVentas.Inventario
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtros";
             // 
-            // txt_nombreArticulo
+            // btn_buscar
             // 
-            this.txt_nombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombreArticulo.Location = new System.Drawing.Point(6, 53);
-            this.txt_nombreArticulo.Name = "txt_nombreArticulo";
-            this.txt_nombreArticulo.Size = new System.Drawing.Size(248, 23);
-            this.txt_nombreArticulo.TabIndex = 0;
-            // 
-            // cmbx_departamento
-            // 
-            this.cmbx_departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbx_departamento.FormattingEnabled = true;
-            this.cmbx_departamento.Location = new System.Drawing.Point(260, 52);
-            this.cmbx_departamento.Name = "cmbx_departamento";
-            this.cmbx_departamento.Size = new System.Drawing.Size(143, 24);
-            this.cmbx_departamento.TabIndex = 1;
-            // 
-            // cmbx_categoria
-            // 
-            this.cmbx_categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbx_categoria.FormattingEnabled = true;
-            this.cmbx_categoria.Location = new System.Drawing.Point(409, 52);
-            this.cmbx_categoria.Name = "cmbx_categoria";
-            this.cmbx_categoria.Size = new System.Drawing.Size(121, 24);
-            this.cmbx_categoria.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre de Artículo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(257, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Departamento";
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.Location = new System.Drawing.Point(536, 47);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(70, 34);
+            this.btn_buscar.TabIndex = 2;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -145,15 +109,52 @@ namespace AsistenteVentas.Inventario
             this.label3.TabIndex = 5;
             this.label3.Text = "Categoría";
             // 
-            // btn_buscar
+            // label2
             // 
-            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.Location = new System.Drawing.Point(536, 47);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(70, 34);
-            this.btn_buscar.TabIndex = 2;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(257, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Departamento";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre de Artículo";
+            // 
+            // cmbx_categoria
+            // 
+            this.cmbx_categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbx_categoria.FormattingEnabled = true;
+            this.cmbx_categoria.Location = new System.Drawing.Point(409, 52);
+            this.cmbx_categoria.Name = "cmbx_categoria";
+            this.cmbx_categoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbx_categoria.TabIndex = 2;
+            // 
+            // cmbx_departamento
+            // 
+            this.cmbx_departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbx_departamento.FormattingEnabled = true;
+            this.cmbx_departamento.Location = new System.Drawing.Point(260, 52);
+            this.cmbx_departamento.Name = "cmbx_departamento";
+            this.cmbx_departamento.Size = new System.Drawing.Size(143, 24);
+            this.cmbx_departamento.TabIndex = 1;
+            this.cmbx_departamento.SelectedValueChanged += new System.EventHandler(this.cmbx_departamento_SelectedValueChanged);
+            // 
+            // txt_nombreArticulo
+            // 
+            this.txt_nombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreArticulo.Location = new System.Drawing.Point(6, 53);
+            this.txt_nombreArticulo.Name = "txt_nombreArticulo";
+            this.txt_nombreArticulo.Size = new System.Drawing.Size(248, 23);
+            this.txt_nombreArticulo.TabIndex = 0;
             // 
             // CatalogoArticulosForm
             // 
@@ -165,6 +166,7 @@ namespace AsistenteVentas.Inventario
             this.Controls.Add(this.lsbox_articulos);
             this.Name = "CatalogoArticulosForm";
             this.Text = "Catálogo de Artículos";
+            this.Load += new System.EventHandler(this.CatalogoArticulosForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
